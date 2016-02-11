@@ -3,7 +3,7 @@ package edu.saintjoe.cs.tcooper.guessgametsc;
 public class GuessGameTSC {
 
 	public static void main(String[] args) {
-		public class GuessGame {
+		public class GuessGameTSC {
 			Player p1;//3 instance variables for the 3 players
 			Player p2;
 			Player p3;
@@ -55,7 +55,7 @@ public class GuessGameTSC {
 				System.out.println("We have a winer!");
 				System.out.println("Player one got it right? " + p1isRight);
 				System.out.println("Player two got it right? " + p2isRight);
-				System.out.println("Player three got it right? "  p3isRight);
+				System.out.println("Player three got it right? " + p3isRight);
 				break; //game over, so break out of the loop
 				
 			} else {
@@ -66,4 +66,18 @@ public class GuessGameTSC {
 
 	}
 
+}
+public class Player {
+	int number = 0; //where the guess goes
+	public void guess() {
+		number = (int) (Math.random() * 10);
+		System.out.println("I'm guessing " + number);
+	
+	}
+}
+public class GameLauncher {
+	public static void main (String[] args) {
+		GuessGameTSC game = new GuessGameTSC();
+		game.startGame();
+	}
 }
