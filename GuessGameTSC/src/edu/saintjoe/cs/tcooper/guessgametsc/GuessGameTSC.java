@@ -46,9 +46,8 @@ public class GuessGameTSC {
 					if (guessp3 == targetNumber) {
 						p3isRight = true;
 					}
-					}
-				}
-			if (p1isRight ll p2isRight ll p3isRight) {//if p1 or p2 or p3 is right
+					
+			if (p1isRight || p2isRight || p3isRight) {//if p1 or p2 or p3 is right
 				System.out.println("We have a winer!");
 				System.out.println("Player one got it right? " + p1isRight);
 				System.out.println("Player two got it right? " + p2isRight);
